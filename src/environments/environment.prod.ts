@@ -3,6 +3,7 @@ export const environment = {
   appUrl: 'http://tcs-project.azurewebsites.net/',
   tcsApi: {
     url: 'http://localhost:5001',
+    profileServiceUrl: 'http://localhost:50155'
   },
   authServer: {
     url: 'http://tcsauthserver20180423080225.azurewebsites.net/',
