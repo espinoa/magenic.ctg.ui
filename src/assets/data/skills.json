@@ -1,0 +1,142 @@
+[
+    {
+        "employeeId" : "1",
+        "thumbnailUrl" : "assets/img/skills/html5.png",
+        "name" : "HTML5",
+        "description" : "",
+        "rating" : 4.25
+    },
+    {
+        "employeeId" : "1",
+        "thumbnailUrl" : "assets/img/skills/css3.png",
+        "name" : "CSS3",
+        "description" : "",
+        "rating" : 4.75
+    },
+    {
+        "employeeId" : "1",
+        "thumbnailUrl" : "assets/img/skills/js.png",
+        "name" : "Javascript",
+        "description" : "",
+        "rating" : 4.5
+    },
+    {
+        "employeeId" : "1",
+        "thumbnailUrl" : "assets/img/skills/bootstrap.png",
+        "name" : "Bootstrap",
+        "description" : "",
+        "rating" : 4
+    },
+    {
+        "employeeId" : "1",
+        "thumbnailUrl" : "assets/img/skills/sass.png",
+        "name" : "SASS",
+        "description" : "",
+        "rating" : 3.25
+    },
+    {
+        "employeeId" : "1",
+        "thumbnailUrl" : "assets/img/skills/less.png",
+        "name" : "LESS",
+        "description" : "",
+        "rating" : 3.60
+    },
+    {
+        "employeeId" : "1",
+        "thumbnailUrl" : "assets/img/skills/angular.png",
+        "name" : "Angular",
+        "description" : "",
+        "rating" : 2.3
+    },
+    {
+        "employeeId" : 1,
+        "thumbnailUrl" : "assets/img/skills/git.png",
+        "name" : "Git",
+        "description" : "",
+        "rating" : 3
+    },
+    {
+        "employeeId" : "1",
+        "thumbnailUrl" : "assets/img/skills/xcode.png",
+        "name" : "XCode",
+        "description" : "",
+        "rating" : 4.5
+    },        
+    {
+        "employeeId" : "1",
+        "thumbnailUrl" : "assets/img/skills/net.png",
+        "name" : ".NET",
+        "description" : "",
+        "rating" : 4.5
+    },
+    {
+        "employeeId" : "1",
+        "thumbnailUrl" : "assets/img/skills/vstudio.png",
+        "name" : "Visual Studio",
+        "description" : "",
+        "rating" : 4.5
+    },
+    {
+        "employeeId" : "1",
+        "thumbnailUrl" : "assets/img/skills/photoshop.png",
+        "name" : "Adobe Photoshop",
+        "description" : "",
+        "rating" : 4.5
+    },            
+    {
+        "employeeId" : "2",
+        "thumbnailUrl" : "assets/img/skills/less.png",
+        "name" : "less",
+        "description" : "",
+        "rating" : 4.5
+    },
+    {
+        "employeeId" : "2",
+        "thumbnailUrl" : "assets/img/skills/js.png",
+        "name" : "Javascript",
+        "description" : "",
+        "rating" : 4.5
+    },
+    {
+        "employeeId" : "2",
+        "thumbnailUrl" : "assets/img/skills/net.png",
+        "name" : ".NET",
+        "description" : "",
+        "rating" : 4.5
+    },
+    {
+        "employeeId" : "2",
+        "thumbnailUrl" : "assets/img/skills/css3.png",
+        "name" : "CSS3",
+        "description" : "",
+        "rating" : 4.5
+    },
+    {
+        "employeeId" : "2",
+        "thumbnailUrl" : "assets/img/skills/bootstrap.png",
+        "name" : "Bootstrap",
+        "description" : "",
+        "rating" : 4.5
+    },
+    {
+        "employeeId" : "3",
+        "thumbnailUrl" : "assets/img/skills/html5.png",
+        "name" : "HTML5",
+        "description" : "",
+        "rating" : 4.5
+    },
+    {
+        "employeeId" : "3",
+        "thumbnailUrl" : "assets/img/skills/js.png",
+        "name" : "Javascript",
+        "description" : "",
+        "rating" : 4.5
+    },
+    {
+        "employeeId" : "3",
+        "thumbnailUrl" : "assets/img/skills/css3.png",
+        "name" : "CSS3",
+        "description" : "",
+        "rating" : 4.5
+    }
+]

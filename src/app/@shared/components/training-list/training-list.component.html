@@ -1,0 +1,51 @@
+<div class="row mt">
+  <div class="course-collection">
+    <!-- nav tabs -->
+    <ul class="nav nav-tabs nav-tabs-right">
+      <li>
+        <a href="#unpublished" role="tab" data-toggle="tab">Unpublished
+          <span class="badge badge-custom" *ngIf="trainings">{{getTrainingsByStatus('Unpublished').length}}</span>
+        </a>
+      </li>
+      <li>
+        <a href="#completed" role="tab" data-toggle="tab">Completed
+          <span class="badge badge-custom" *ngIf="trainings">{{getTrainingsByStatus('Completed').length}}</span>
+        </a>
+      </li>
+      <li>
+        <a href="#required" role="tab" data-toggle="tab">Required
+          <span class="badge badge-custom" *ngIf="trainings">{{getTrainingsByStatus('Required').length}}</span>
+        </a>
+      </li>
+      <li>
+        <a href="#in-progress" role="tab" data-toggle="tab">In Progress
+          <span class="badge badge-custom" *ngIf="trainings">{{getTrainingsByStatus('In Progress').length}}</span>
+        </a>
+      </li>
+      <li class="active">
+        <a href="#all" role="tab" data-toggle="tab">All
+          <span class="badge badge-custom" *ngIf="trainings">{{getTrainingsByStatus().length}}</span>
+        </a>
+      </li>
+    </ul>
+
+    <!-- tab contents -->
+    <div class="tab-content">
+      <div id="all" class="tab-pane fade in active">
+          <app-training *ngFor="let training of getTrainingsByStatus()" [training]="training" [hasEditAccess]="userInfo?.isSuperUser"></app-training>
+      </div>
+      <div id="unpublished" class="tab-pane fade">
+          <app-training *ngFor="let training of getTrainingsByStatus('Unpublished')" [training]="training" [hasEditAccess]="userInfo?.isSuperUser"></app-training>
+      </div>
+      <div id="completed" class="tab-pane fade">
+          <app-training *ngFor="let training of getTrainingsByStatus('Completed')" [training]="training" [hasEditAccess]="userInfo?.isSuperUser"></app-training>
+      </div>
+      <div id="required" class="tab-pane fade">
+          <app-training *ngFor="let training of getTrainingsByStatus('Required')" [training]="training" [hasEditAccess]="userInfo?.isSuperUser"></app-training>
+      </div>
+      <div id="in-progress" class="tab-pane fade">
+          <app-training *ngFor="let training of getTrainingsByStatus('In Progress')" [training]="training" [hasEditAccess]="userInfo?.isSuperUser"></app-training>
+      </div>
+    </div>
+  </div>
+</div>

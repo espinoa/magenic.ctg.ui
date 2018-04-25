@@ -1,0 +1,60 @@
+<div class="course-content">
+  <header>
+      <span class="glyphicon glyphicon-menu-left mr-d" (click)="back()"></span> <span class="glyphicon glyphicon-menu-hamburger" (click)="openNav()"></span> Angular 4: Going to Angular 5
+  </header>
+
+
+<mat-sidenav-container class="example-container">
+    <mat-sidenav #sidenav mode="over" [(opened)]="navOpen">
+        <!-- <div class="course-sidebar">
+          
+            <ul>
+              <li *ngFor="let lesson of lessonList" >
+                <span class="lNum">{{lesson.lessonNum}}</span>
+                <span class="lName">{{lesson.lessonName}} <i *ngIf="lesson.isFinished" class="glyphicon glyphicon-check"></i></span>
+                <span class="vlength">{{lesson.vidlength}}</span>
+      
+              </li>
+            </ul>
+      
+            <div class="course-abandon">
+              <button class="btnAbandon" (click)="back()"><i class="glyphicon glyphicon-alert"></i> Abandon Course</button>
+            </div>
+          </div> -->
+          <div class="course-sidebar">
+          <mat-accordion>
+          <mat-expansion-panel *ngFor="let lesson of lessonList; let i = index" [expanded]="i === 0" hideToggle="true">
+              <mat-expansion-panel-header (click)="bindVideo(lesson.url)">
+                <mat-panel-title>
+                  {{lesson.lessonNum}}
+                </mat-panel-title>
+                <mat-panel-description>
+                  <span class="lName">{{lesson.lessonName}} <i *ngIf="lesson.isFinished" class="glyphicon glyphicon-check"></i></span>
+                  <span class="vlength">{{lesson.vidlength}}</span>
+                  <br class="clear" />
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+            
+              <div class="lesson-resources">
+                <h4>Lesson Resources</h4>
+                <ul>
+                  <li *ngFor="let resource of lesson.resc">
+                    <i class="glyphicon glyphicon-file"></i>
+                    <span><a href="./assets/app/files/{{resource}}" download>{{resource}}</a></span>
+                  </li>
+                </ul>
+              </div>
+            
+            </mat-expansion-panel>
+          </mat-accordion>
+            <div class="course-abandon">
+                <button class="btnAbandon" (click)="back()"><i class="glyphicon glyphicon-alert"></i> Abandon Course</button>
+              </div>
+          </div>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div class="course-video">
+              <app-video-player [src]="videoUrl"></app-video-player>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

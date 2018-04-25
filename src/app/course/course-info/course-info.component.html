@@ -1,0 +1,230 @@
+<app-main-layout>
+  <div class="container">
+    <div class="tcs-content">
+      <div class="container-fluid mt-d">
+        <div class="course-collection">
+          <header>
+            <span class="glyphicon glyphicon-menu-left mr-d" (click)="back()"></span> {{this?.form.get('name').value}}
+          </header>
+          <ul class="nav nav-tabs nav-tabs-right">
+            <li>
+              <a href="#exams" role="tab" data-toggle="tab">Exams</a>
+            </li>
+            <li>
+              <a href="#content" role="tab" data-toggle="tab">Content</a>
+            </li>
+            <li class="active">
+              <a href="#info" role="tab" data-toggle="tab">Info</a>
+            </li>
+          </ul>
+
+          <div class="tab-content">
+            <div id="info" class="exam-content tab-pane fade in active">
+              <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-7">
+                  <form [formGroup]="form">
+                    <div>
+                      <span class="fs-16">Course Title</span>
+                      <span class="course-meta-data darker fr">ver 2</span>
+                      <span class="course-meta-data fr">Published</span>
+                    </div>
+                    <input type="text" class="input-default blk mb" formControlName="name" />
+                    <div *ngIf="form.controls['name'].errors && !form.controls['name'].pristine && submitAttempt" class="alert alert-danger">
+                      <div *ngIf="form.controls['name'].errors.required">Course title is required.</div>
+                    </div>
+                    <div>
+                      <span class="fs-16">Description</span>
+                    </div>
+                    <textarea class="blk mt-4 mb" formControlName="description"></textarea>
+                    <div *ngIf="form.controls['description'].errors && !form.controls['description'].pristine && submitAttempt" class="alert alert-danger">
+                      <div *ngIf="form.controls['description'].errors.required">Course description is required.</div>
+                    </div>
+                    <div>
+                      <span class="fs-16">Job Levels</span>
+                    </div>
+                    <div class="chips mt-4 mb">
+                      <app-chip-component [chipContent]="chipContent">
+                      </app-chip-component>
+                    </div>
+                    <div>
+                      <span class="fs-16">Cover Image</span>
+                    </div>
+                    <div class="type-file mt-4 mb">
+                      <span text>Choose file</span>
+                      <span btn>Browse</span>
+                      <input type="file" />
+                    </div>
+
+                    <div class="row mt-d">
+                      <div class="col-md-6">
+                        <button type="button" class="btn btn-ctg-default" (click)="submit('save')">Save</button>
+                        <a type="button" class="btn btn-ctg-default btn-clear btn-fs-small">Cancel changes</a>
+                      </div>
+                      <div class="col-md-6">
+                        <button type="button" class="btn btn-ctg-default" (click)="submit('publish')">Publish</button>
+                        <button type="button" class="btn btn-ctg-gray btn-outline" (click)="retireCourse()">Retire Course</button>
+                      </div>
+                    </div>
+                  </form>
+
+                </div>
+              </div>
+            </div>
+
+            <div id="content" class=" tab-pane fade">
+              <div class="row exam-content">
+                <div class="col-md-1"></div>
+                <div class="col-md-8">
+
+                  <div id="pg-exam-content" class="panel-group ctg-panel-group">
+                    <!--Note: ec-p-4 is examcontent-panel-4, id's like this must be generated-->
+
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h4 class="panel-title">
+                          <a role="button" data-toggle="collapse" data-target="#ec-p-1" data-parent="#pg-exam-content">
+                            <span class="content-chapter mr-ds">Chapter 1:</span>Introduction
+                            <i class="fa fa-pencil-square ml-ds"></i>
+                            <span class="glyphicon glyphicon-chevron-down fr"></span>
+                          </a>
+                        </h4>
+                      </div>
+
+                      <div id="ec-p-1" class="panel-collapse collapse">
+                        <div class="panel-body">
+                          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                          non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf
+                          moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch
+                          et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                          Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic
+                          synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                      <div class="panel-heading" role="tab" id="headingTwo">
+                        <h4 class="panel-title">
+                          <a class="collapsed" data-toggle="collapse" data-target="#ec-p-2" data-parent="#pg-exam-content">
+                            <span class="content-chapter mr-ds">Chapter 2:</span>Modules
+                            <i class="fa fa-pencil-square ml-ds"></i>
+                            <span class="glyphicon glyphicon-chevron-down fr"></span>
+                          </a>
+                        </h4>
+                      </div>
+                      <div id="ec-p-2" class="panel-collapse collapse">
+                        <div class="panel-body">
+                          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                          non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf
+                          moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch
+                          et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                          Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic
+                          synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h4 class="panel-title">
+                          <a class="collapsed" role="button" data-toggle="collapse" data-target="#ec-p-3" data-parent="#pg-exam-content">
+                            <span class="content-chapter mr-ds">Chapter 3:</span>Routing
+                            <i class="fa fa-pencil-square ml-ds"></i>
+                            <span class="glyphicon glyphicon-chevron-up fr"></span>
+                          </a>
+                        </h4>
+                      </div>
+                      <div id="ec-p-3" class="panel-collapse collapse in">
+                        <div class="panel-body p-b-min-height">
+                          <div class="centered-content tc">
+                            <button type="button" class="btn btn-ctg-gray mr-d">Add Video</button>
+                            <button type="button" class="btn btn-ctg-gray">Add other files</button>
+                            <span class="delete-section fs-16">
+                              <span class="glyphicon glyphicon-remove-sign mr-ds"></span>Delete section</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h4 class="panel-title">
+                          <a class="collapsed" data-toggle="collapse" data-target="#ec-p-4" data-parent="#pg-exam-content">
+                            <span class="content-chapter mr-ds">Chapter 4:</span>Dependencies
+                            <i class="fa fa-pencil-square ml-ds"></i>
+                            <span class="glyphicon glyphicon-chevron-up fr"></span>
+                          </a>
+                        </h4>
+                      </div>
+                      <div id="ec-p-4" class="panel-collapse collapse in">
+                        <div class="panel-body p-b-min-height">
+                          <div class="centered-content tc"></div>
+                          <p class="l-i-c-tag">Lesson resource</p>
+                          <div class="fxb fxb-row fxb-center tc">
+                            <div>
+                              <i class="fa fa fa-file-word-o l-i-c-icon"></i>
+                              <div class="l-i-c-title">asd.docx</div>
+                            </div>
+                            <div>
+                              <i class="fa fa fa-file-powerpoint-o l-i-c-icon"></i>
+                              <div class="l-i-c-title">asd.ppt</div>
+                            </div>
+                            <div>
+                              <div class="add-more-files">
+                                <span class="glyphicon glyphicon-plus-sign"></span>
+                                <span>Add more files</span>
+                              </div>
+                            </div>
+                          </div>
+                          <span class="delete-section fs-16">
+                            <span class="glyphicon glyphicon-remove-sign mr-ds"></span>Delete section</span>
+                        </div>
+                      </div>
+
+                    </div>
+
+                  </div>
+                  <!--/#pg-exam-content-->
+                  <div class="tc">
+                    <span class="add-section fs-16">
+                      <span class="glyphicon glyphicon-remove-sign mr-ds"></span>Add section</span>
+                  </div>
+                  <div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <button class="btn btn-ctg-default" type="button">Save</button>
+                      </div>
+                      <div class="col-md-6 mt tr">
+                        <button class="btn btn-ctg-gray btn-outline" type="button">Retire Course</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3"></div>
+              </div>
+
+            </div>
+
+            <div id="exams" class="exam-content tab-pane fade">
+              <div class="dropzone" fileDnd (fileChangeEmiter)="uploadFile($event)" [allowedExtensions]="allowedExtensions">
+                <div class="dropzone-text">
+                  <p>Drag and drop a file here</p>
+                  <p>or</p>
+                  <p>Browse for a file to upload</p>
+                  <label for="file-upload" class="custom-file-upload">Browse</label>
+                  <input id="file-upload" type="file" (change)="onFilesChange($event)" accept="{{allowedExtensions}}" />
+                </div>
+              </div>
+              <div class="exam-button">
+                <button type="button" class="btn btn-ctg-default" (click)="submit('save')">Save</button>
+                <span class="fill-space"></span>
+                <button type="button" class="btn btn-ctg-gray btn-outline" (click)="retireCourse()">Retire Course</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</app-main-layout>

@@ -1,0 +1,23 @@
+<div class="col-md-3">
+  <div class="course default-shadow">
+    <div class="course-billboard">
+      <span class="badge course-badge {{ statusClass }}">{{ training.status }}</span>
+      <img src="{{ training.thumbnailUrl}}" />
+    </div>
+    <div class="course-info">
+      <p class="title">{{ training.name }}</p>
+      <p class="sub-title"> {{ training.description }}</p>
+    </div>
+    <div class="course-overlay co-horizontal">
+      <div *ngIf="hasEditAccess" (click)="onCourseEdit($event)">
+        <i class="fa fa-pencil-square course-icon"></i>
+        <div>Edit</div>
+        <div>Course</div>
+      </div>
+      <div>
+        <i class="fa fa-folder-open-o course-icon" (click)="onTakeCourse($event)"></i>
+        <div>Take</div>
+        <div>Course</div>
+      </div>
+    </div>
+  </div>

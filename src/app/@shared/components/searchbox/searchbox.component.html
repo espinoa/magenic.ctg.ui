@@ -1,0 +1,18 @@
+<div class="search-course">
+  <input type="text" 
+          (focus)="hidePlaceHolder(true)" 
+          (blur)="hidePlaceHolder(false)" 
+          (input)="keyword = $event.target.value"
+          (keyup.enter)="search($event)" />
+
+  <div class="search-placeholder">
+    <div class="sp-t-c fr" (click)="search($event)">
+      <span>Search&nbsp;</span>
+      <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+    </div>
+
+    <div [hidden]="isHidden" class="sp-t-a">Search for courses:</div>
+    <div [hidden]="isHidden" class="sp-t-b">ex. Angular</div>
+  </div>
+</div>
+<!-- <input type="button" (click)="search($event)"/> -->

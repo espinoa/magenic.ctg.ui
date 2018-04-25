@@ -1,0 +1,18 @@
+[
+    {
+        "Id": "1",
+        "Email" : "tedb@magenic.com",
+        "FirstName" : "Ted",
+        "LastName" : "Borlongan",
+        "JobTitle" : "Lead Developer",
+        "Photo" : "/assets/app/img/Profile.JPG"
+    },
+    {
+        "Id": "2",
+        "Email" : "zackayz@magenic.com",
+        "FirstName" : "Zack",
+        "LastName" : "Zabala",
+        "JobTitle" : "Consulting Manager",
+        "Photo" : "/assets/app/img/Profile.JPG"
+    }
+]

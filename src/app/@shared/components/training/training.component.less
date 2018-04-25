@@ -1,0 +1,81 @@
+@import "../../styles/variables.less";
+
+.course{
+background-color: #fff;
+>.course-billboard{
+    position: relative;
+    height: 157px;
+    >img{
+    width: 100%;
+    height: 100%;
+    }
+}
+>.course-info{
+    position: relative;
+    padding: @default-spacing;
+    >p.title{
+    font-family: 'Roboto', sans-serif;	
+    font-size: 16px;	
+    line-height: 21px;
+    }
+    >p.sub-title{
+    font-family: 'Roboto', sans-serif;	
+    font-size: 12px;	
+    line-height: 21px;
+    }
+}
+>.course-overlay{
+    position: absolute;
+    display: none;
+    top: 0;
+    left: @default-spacing;
+    right: @default-spacing;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.9);
+    align-items: center;
+    justify-content: center;
+    font-size: 9pt;
+    color: #fff;
+    cursor: pointer;
+    .course-icon{
+        font-size: 32pt;
+        }
+    }
+}
+.course:hover > .course-overlay{
+    display: flex;
+    flex-direction: column;
+}
+.course:hover > .course-overlay.co-horizontal{
+    flex-direction: row;
+    >div{
+        margin: @default-spacing;
+        text-align: center;
+    }
+}
+
+.course-badge{
+position: absolute;
+top: @default-spacing;
+right:  @default-spacing;
+padding: 5px;
+border-radius: unset;
+font-size: 8px;
+box-shadow: 0 2px 4px 0 rgba(0,0,0,0.04);
+    &.course-in-progress{
+        background-color: #F26A21;
+        color: #fff;
+    }
+    &.course-required{
+        background-color: #FED75A;
+        color: #6D5300;
+    }
+    &.course-completed{
+        background-color: #AAA;
+        color: #fff;
+    }
+    &.course-retired{
+        background-color: #494949;
+        color: #fff;
+    }
+}

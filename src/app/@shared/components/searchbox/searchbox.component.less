@@ -1,0 +1,49 @@
+@import "../../styles/variables.less";
+.search-course {
+    position: relative;
+    display: inline-block;
+    margin-right: @default-spacing;
+    height: 53px;
+    width: 593px;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.04);
+    vertical-align: middle;
+    >input[type="text"] {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        border: none;
+        padding: @default-spacing;
+        background-color: transparent;
+        z-index: 1;
+    }
+    >.search-placeholder {
+        height: 53px;
+        padding: 10px @default-spacing;
+        z-index: -1;
+        >.sp-t-a {
+            font-family: 'Roboto', sans-serif;
+            font-size: 11px;
+            line-height: 15px;
+            color: #979797;
+        }
+        >.sp-t-b {
+            font-family: "Open Sans";
+            font-size: 15px;
+            line-height: 20px;
+            color: #979797;
+        }
+        >.sp-t-c {
+            position: relative;
+            z-index: 1;
+            padding-top: 4px;
+            font-family: "Open Sans";
+            font-size: 18px;
+            letter-spacing: -1px;
+            line-height: 24px;
+            color: #969695;
+        }
+    }
+}

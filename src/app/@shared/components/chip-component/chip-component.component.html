@@ -1,0 +1,19 @@
+<mat-chip-list #chipList>
+    <mat-chip *ngFor="let tag of chipContent.selectedChips" [selectable]="selectable" [removable]="removable" (remove)="removeFromSelectedTags(tag)">
+            {{ tag }}
+            <mat-icon matChipRemove *ngIf="removable">x</mat-icon>
+    </mat-chip>
+    <input  id="chipMainTextBox"
+            placeholder="Select Tag..."
+            *ngIf=hasOptions 
+            (keyup)="filter($event)"
+            (blur)="filter($event)"            
+            [matChipInputFor]="chipList"
+            [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+            (matChipInputTokenEnd)="addToSelectedTags($event)" matInput [matAutocomplete]="auto"/>
+    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+        <mat-option *ngFor="let option of filteredOptions" [value]="option">
+            {{ option }}
+        </mat-option>
+    </mat-autocomplete>
+</mat-chip-list>

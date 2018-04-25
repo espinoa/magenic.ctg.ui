@@ -1,0 +1,38 @@
+[
+    {
+        "TrainingId" : "1",
+        "Name" : "Angular 4: The Basics",
+        "Description" : "Much to learn, my young padawan! Basics, you must know. Dark side, you cannot go! POC-1",
+        "ThumbnailUrl" : "/assets/app/img/Angular.jpg",
+        "Status" : "In Progress",
+        "JobLevels": ["Developer", "Senior Developer"]
+    },
+    {
+        "TrainingId" : "2",
+        "Name" : "Angular 4: The Basics",
+        "Description" : "Much to learn, my young padawan! Basics, you must know. Dark side, you cannot go! POC-1",
+        "ThumbnailUrl" : "/assets/app/img/Angular.jpg",
+        "Status" : "Completed"
+    },
+    {
+        "TrainingId" : "3",
+        "Name" : "Angular 4: The Basics",
+        "Description" : "Much to learn, my young padawan! Basics, you must know. Dark side, you cannot go! POC-2",
+        "ThumbnailUrl" : "/assets/app/img/Angular.jpg",
+        "Status" : "Required"
+    },
+    {
+        "TrainingId" : "4",
+        "Name" : "Angular 4: The Basics",
+        "Description" : "Much to learn, my young padawan! Basics, you must know. Dark side, you cannot go! POC-3",
+        "ThumbnailUrl" : "/assets/app/img/Angular.jpg",
+        "Status" : "Retired"
+    },
+    {
+        "TrainingId" : "4",
+        "Name" : "Angular 4: The Basics",
+        "Description" : "Much to learn, my young padawan! Basics, you must know. Dark side, you cannot go! POC-2",
+        "ThumbnailUrl" : "/assets/app/img/Angular.jpg",
+        "Status" : "Unpublished"
+    }
+]

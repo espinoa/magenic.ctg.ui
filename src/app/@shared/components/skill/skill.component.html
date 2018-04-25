@@ -1,0 +1,20 @@
+<ng-template #skillProficiency>
+    <div class="row">
+        <div class="col-md-3">
+            <img src="{{skill.thumbnailUrl}}" class="img-thumbnail skill-thumbnail align-center"/> 
+        </div>
+        <div class="col-md-9 skill-prof-detail">
+            <h4>{{skill.name}}</h4>
+
+            <ng-template #t let-fill="fill">
+                    <span *ngIf="fill === 100" class="star full">&#9733;</span>
+                    <span *ngIf="fill === 0" class="star">&#9733;</span>
+                    <span *ngIf="fill < 100 && fill > 0" class="star">
+                      <span class="half" [style.width.%]="fill">&#9733;</span>&#9733;
+                    </span>
+            </ng-template>
+            <ngb-rating class="skill-rating" [(rate)]="skill.rating" [starTemplate]="t" [readonly]="true" max="5" ></ngb-rating>
+        </div>
+    </div>
+</ng-template>
+<img src="{{skill.thumbnailUrl}}" class="skill-icon" placement="bottom" [ngbTooltip]="skillProficiency" >

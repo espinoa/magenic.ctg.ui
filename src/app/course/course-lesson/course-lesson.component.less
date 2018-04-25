@@ -1,0 +1,183 @@
+@import "../../@shared/styles/variables.less";
+
+.course-content {
+    min-height: 568px; 
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 21px;
+    color: #8E8E8E;
+    cursor: default;
+    >header {
+        background-color: #23232c;
+        color: white;
+        height: 60px;
+        padding: 15px 5px;
+        width: 100%;
+        font-family: Roboto;
+        font-size: 24px;
+    }
+}
+.course-container{
+    display: block;
+    width: 100%;
+    height: 720px;
+    position: relative;
+}
+.course-sidebar{
+    width: 480px;
+    height:100%;
+    background-color: rgba(34, 34, 34, 0.9);
+    display:inline-block;
+}
+.course-sidebar ul{
+    margin: 0;
+    padding:0;
+}
+
+// .course-sidebar ul li{
+// list-style-type: none;
+// width: 480px;
+// height: 40px;
+// background-color: rgba(255, 255, 255, 0);
+// box-shadow: inset 0 -1px 0 0 rgba(255, 255, 255, 0.08);
+// }
+.course-sidebar .lNum{
+    width: 20px;
+    height: 35px;
+    display: inline-block;
+}
+.course-sidebar .lName{
+    width: 120px;
+    height: 40px;
+    padding: 10px 0;
+    float:left;
+}
+.course-sidebar .vlength{
+    width: 35px;
+    height: 25px;
+    padding: 10px 0;
+    display: block;
+  float:right;
+}
+.course-sidebar .vlength::after{
+clear: both;
+}
+// .course-sidebar ul li span{
+//     padding: 5px;
+//     font-family: Roboto;
+//     font-size: 12px;
+//     font-weight: normal;
+//     font-style: normal;
+//     font-stretch: normal;
+//     line-height: normal;
+//     letter-spacing: normal;
+//     text-align: left;
+//     color: #ffffff;
+// }
+.course-video video{
+    margin:0;
+    padding:0;
+    width:100%;
+    height:720px;
+    object-fit: contain;
+}
+
+.course-abandon{
+    display:block;
+    margin:0 25px;
+    height: 200px;
+}
+.course-abandon button{
+    border:none; 
+    background:none;
+}
+.btnAbandon{
+  width: 166px;
+  height: 38px;
+  background-color: #f26a21 !important;
+  color: #ffffff !important;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.31;
+  letter-spacing: normal;
+  text-align: left;
+  background-color: var(--orange);
+}
+.lName .glyphicon-check{
+    font-size: 9px !important;
+    display:inline-block;
+    padding-left: 5px;
+    color:#50e3c2 !important;
+}
+
+header .glyphicon{
+    cursor: pointer !important;
+}
+.course-content .mat-drawer {
+    background: none !important;
+    overflow-y: hidden !important;
+}
+.course-content .mat-expansion-panel {
+    background: none !important;
+    color: white !important;
+    box-shadow: inset 0 -1px 0 0 rgba(255, 255, 255, 0.08) !important;
+}
+.course-content .mat-expansion-panel-header-title{
+    max-width: 20px !important;
+    margin: 0 !important;
+    padding: 10px 0 !important;
+    color: white !important;
+}
+
+.course-content .mat-expansion-panel-header-description{
+    color: white !important;
+    display: block !important;
+}
+
+.course-content .mat-expansion-panel-header.mat-expanded{
+    background-color: #198fdb !important;
+}
+.course-content .mat-accordion {
+    height: 670px;
+    display: block;
+}
+
+.clear{
+    clear: both;
+}
+.lesson-resources h4{
+    font-family: Roboto;
+    font-size: 10px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+}
+.lesson-resources li{
+    display: inline-block;
+    width: 80px;
+    height: 50px;
+    list-style: none;
+    margin: 0 5px;
+}
+.lesson-resources i{
+    font-size: 30px;
+    text-align: center;
+    width: 80px;
+}
+.lesson-resources span{
+    font-size: 10px;
+    text-align: center;
+    width: 80px;
+    display:block;
+}
+.lesson-resources span a{
+    color: white;
+    text-decoration: none !important;
+}

@@ -1,0 +1,43 @@
+[
+    {
+        "LessonNumber" : "1",
+        "LessonName": "Introduction",
+        "Resources": ["sample-doc.doc", "sample-doc.pptx"],
+        "VideoLength": "4:09",
+        "IsFinished" : true,
+        "VideoURL" : "/assets/app/video/intro-video.mp4"
+    },
+    {
+        "LessonNumber" : "2",
+        "LessonName": "Modules",
+        "Resources": ["sample-doc.pdf", "sample-doc.pptx"],
+        "VideoLength": "3:41",
+        "IsFinished" : true,
+        "VideoURL" : "/assets/app/video/test-video.mp4"
+    },
+    {
+        "LessonNumber" : "3",
+        "LessonName": "Routing",
+        "Resources": ["sample-doc.doc", "sample-doc.xlsx"],
+        "VideoLength": "4:07",
+        "IsFinished" : false,
+        "VideoURL" : "/assets/app/video/intro-video.mp4"
+    },
+    {
+        "LessonNumber" : "4",
+        "LessonName": "Dependencies",
+        "Resources": ["sample-doc.doc", "sample-doc.xlsx"],
+        "VideoLength": "3:23",
+        "IsFinished" : false,
+        "VideoURL" : "/assets/app/video/test-video.mp4"
+    }
+    ,
+    {
+        "LessonNumber" : "5",
+        "LessonName": "Advanced AF",
+        "Resources": ["sample-doc.pdf", "sample-doc.xlsx"],
+        "VideoLength": "2:59",
+        "IsFinished" : false,
+        "VideoURL" : "/assets/app/video/intro-video.mp4"
+    }
+]

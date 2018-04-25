@@ -1,0 +1,31 @@
+<app-main-layout>
+  <div class="container">
+    <div class="tcs-content">
+      <div>
+        <div class="pos-relative default-shadow">
+          <div class="profile-photo">            
+            <img alt="User Image" src="{{userImage}}" />
+          </div>
+          <div class="profile-name">
+            <div id="profile-name-complete">{{currentUser?.firstName}} {{currentUser?.lastName}}</div>
+            <div id="profile-name-title" class="profile-name-title">{{currentUser?.jobTitle}}</div>
+          </div>
+          <div class="profile-skills">
+            <app-skill *ngFor="let skill of skillset" [skill]="skill"></app-skill>
+          </div>
+        </div>
+      </div>
+      <div class="spacer"></div>
+      <div class="row mt-d">
+        <app-searchbox (searchEvent)="receiveKeyword($event)"></app-searchbox>
+        <button type="button" class="btn btn-add-course" *ngIf="currentUser?.isSuperUser" routerLink="/course/new">ADD COURSE</button>
+      </div>
+
+      <app-training-list [userInfo]="currentUser" [keyword]="keyword"></app-training-list>
+
+      <!-- <div class="row mt-d tc">
+        <a class="show-more">Show more</a>
+      </div> -->
+    </div>
+  </div>
+</app-main-layout>

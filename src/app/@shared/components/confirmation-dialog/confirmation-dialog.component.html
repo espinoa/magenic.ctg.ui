@@ -1,0 +1,16 @@
+<div class="dialog-box">
+  <div class="dialog-header">
+    <span class="header-text">{{ title }}</span>
+  </div>
+  <div class="dialog-body">
+    <p class="dialog-message">{{ message }}</p>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="dialogcheckbox" (change)="selectionChange($event.srcElement.checked)">
+      <label class="form-check-label" for="dialogcheckbox">{{ checkboxMessage }}</label>
+    </div>
+  </div>
+  <div class="dialog-buttons">
+    <button class="btn btn-ctg-gray btn-outline" (click)="onCancelClick()">{{ btnCancel }}</button>
+    <button class="btn btn-ctg-default" (click)="onConfirmation()">{{ btnConfirmation }}</button>
+  </div>
+</div>
